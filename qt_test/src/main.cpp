@@ -66,7 +66,8 @@ int main(int argc, char *argv[])
   exec.add_node(node);
   exec.spin();
   rclcpp::shutdown();
-
+#else
+  return app.exec();
 #endif
 
   return 0;
